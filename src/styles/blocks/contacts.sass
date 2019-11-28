@@ -1,0 +1,44 @@
+.contacts
+  display: inline-block
+  width: 100%
+  max-width: 380px
+  padding: 40px
+  padding-top: 0
+  background-color: rgba(#fcfcfc, .85)
+  border-radius: 10px
+
+.contacts__title
+  display: flex
+  justify-content: center
+
+.contacts__data-item
+  position: relative
+  padding-left: 35px
+  margin-bottom: 20px
+  color: $main-font-color
+  font-weight: 500
+  line-height: 24px
+  opacity: 0.8
+  &::before
+    content: ''
+    @include centered(y)
+    left: 0
+    display: block
+    width: 24px
+    height: 24px
+  &:nth-child(1)
+    &::before
+      background: url(../img/skype.svg) no-repeat center
+
+  &:nth-child(2)
+    &::before
+      background: url(../img/envelope.svg) no-repeat center
+
+
+  &:nth-child(3)
+    &::before
+      background: url(../img/phone.svg) no-repeat center
+
+  &:nth-child(4)
+    &::before
+      background: url(../img/map_marker.svg) no-repeat center

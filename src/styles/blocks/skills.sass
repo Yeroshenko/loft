@@ -1,0 +1,42 @@
+.skills__item
+  &:not(:last-child)
+    margin-bottom: 25px
+
+.skill-section__title
+  margin-left: 10px
+  margin-bottom: 10px
+  color: $main-font-color
+  font-size: 28px
+  font-weight: 500
+
+.skill-section__list
+  display: flex
+
+  
+.skills-section__item
+  &:not(:last-child)
+    margin-right: 15px
+    
+  
+.skill
+  position: relative
+
+.skill__circle
+  width: 150px
+  height: 150px
+  fill: none
+
+.skill__ring
+  stroke-width: 20px
+  stroke: #dfdcd5
+
+.skill__level
+  stroke-width: 20px
+  stroke: $green-color
+
+.skill__name
+  @include centered()
+  color: $green-color
+  text-align: center
+  font-size: 13px
+  font-weight: 500

@@ -2,10 +2,9 @@
 
 let gulp = require('gulp'),
 gp = require('gulp-load-plugins')(),
+fs = require('fs'),
 del = require('del'),
 browserSync = require('browser-sync').create();
-
-// pg.pug = gulp-sass
 
 
 // clean
@@ -15,8 +14,11 @@ gulp.task('clean', function() {
 
 // pug
 gulp.task('pug', () => {
+  // let locals = require('./content.json');
+
   return gulp.src('src/template/pages/*.pug')
     .pipe(gp.pug({
+      locals: JSON.parse(fs.readFileSync('./content.json', 'utf-8')),
       pretty: true
     }))
     .pipe(gulp.dest('build'))
@@ -34,7 +36,7 @@ gulp.task('sass', () => {
     }))
     .pipe(gp.autoprefixer({ overrideBrowserslist: 'last 8 version' }))
     .pipe(gp.sourcemaps.write())
-    .pipe(gulp.dest('build/assets/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -44,7 +46,7 @@ gulp.task('js', () => {
     .pipe(gp.sourcemaps.init())
     .pipe(gp.concat('app.js'))
     .pipe(gp.sourcemaps.write())
-    .pipe(gulp.dest('build/assets/js'))
+    .pipe(gulp.dest('build/js'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -55,7 +57,7 @@ gulp.task('js:foundation', () => {
     // and others libs
   ])
     .pipe(gp.concat('foundation.js'))
-    .pipe(gulp.dest('build/assets/js'))
+    .pipe(gulp.dest('build/js'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
@@ -67,20 +69,20 @@ gulp.task('css:foundation', () => {
   ]) 
     .pipe(gp.concatCss('foundation.css'))
     .pipe(gp.csso())
-    .pipe(gulp.dest('build/assets/css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.reload({ stream: true }));
 });
 
 // copy:image
 gulp.task('copy:image', () => {
-  return gulp.src('/src/img/**/*.*')
-    .pipe( gulp.dest('build/assets/img'));
+  return gulp.src('src/img/**/*.*')
+    .pipe( gulp.dest('build/img'));
 });
 
 // copy:fonts
 gulp.task('copy:fonts', () => {
-  return gulp.src('/src/fonts/**/*.*')
-    .pipe( gulp.dest('build/assets/fonts'));
+  return gulp.src('src/fonts/**/*.*')
+    .pipe( gulp.dest('build/fonts'));
 });
 
 // watch
@@ -88,15 +90,16 @@ gulp.task('watch', () => {
   gulp.watch('src/template/**/*.pug', gulp.series('pug'));
   gulp.watch('src/styles/**/*.sass', gulp.series('sass'));
   gulp.watch('src/js/**/*.js', gulp.series('js'));
-  // gulp.watch('src/img/**/*.*', gulp.series('copy:image'));
-  // gulp.watch('src/fonts/**/*.*', gulp.series('copy:fonts'));
+  gulp.watch('src/img/**/*.*', gulp.series('copy:image'));
+  gulp.watch('src/fonts/**/*.*', gulp.series('copy:fonts'));
 });
 
 // server
 gulp.task('server', function() {
   browserSync.init({
+      open: false,
       server: {
-          baseDir: "./build"
+        baseDir: "./build"
       }
   });
 });
@@ -125,7 +128,7 @@ gulp.task('sprite:svg', () => {
         }
       }
     }))
-    .pipe(gulp.dest('build/assets/img'));
+    .pipe(gulp.dest('build/img'));
 });
 
 

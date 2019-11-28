@@ -1,0 +1,27 @@
+.title
+  position: relative
+  display: inline-block
+  padding: 40px 70px
+  color: $main-font-color
+  font-family: "Bernier"
+  font-size: 63px
+  letter-spacing: 1.57px
+  background-size: contain
+  background-position: center
+  background-repeat: no-repeat
+
+  $margin: 40px
+
+  &::after, &::before
+    content: ''
+    display: block
+    @include centered(y)
+    background: rgba($main-font-color, .2)
+    width: 22px
+    height: 5px
+
+  &::before
+    left: $margin
+
+  &::after
+    right: $margin

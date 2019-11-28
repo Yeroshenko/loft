@@ -1,0 +1,25 @@
+.subtitle
+  position: relative
+  display: inline-block
+  padding: 40px 
+  color: $subtitle-font-color
+  font-family: "Bernier"
+  font-size: 35px
+  letter-spacing: 1.57px
+  text-align: center
+
+  $margin: 0px
+
+  &::after, &::before
+    content: ''
+    display: block
+    @include centered(y)
+    background: rgba($main-font-color, .2)
+    width: 22px
+    height: 5px
+
+  &::before
+    left: $margin
+
+  &::after
+    right: $margin

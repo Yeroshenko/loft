@@ -1,0 +1,47 @@
+.about
+  display: flex
+  flex-direction: row
+
+
+.about__left, 
+.about__right
+  position: relative
+  width: 50%
+  display: flex
+  flex-direction: column
+  padding-bottom: 40px
+ 
+.about__left
+  align-items: flex-end
+  background-color: $white
+
+
+.about__right
+  background-color: $breige
+  align-items: flex-start
+
+
+.about__left-inner
+  margin-right: 80px
+  max-width: 450px
+  display: flex
+  flex-direction: column
+  align-items: center
+
+.about__right-inner
+  margin-left: 40px
+  max-width: 600px
+.about__triangles
+  position: absolute
+  bottom: 100%
+
+.about__title-wrap
+  display: flex
+  justify-content: center
+
+.about-data__description
+  margin-bottom: 55px
+
+.about__contacts
+  @include centered()
+

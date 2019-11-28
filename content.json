@@ -1,0 +1,15 @@
+{
+  "skills" : [
+    {
+      "Frontend" : ["HTML5", "CSS3", "JavaScript & jQuery"]
+    },
+    {
+      "Backend" : ["PHP", "mySQL", "Node.js & npm"]
+    },
+    {
+      "WorkFlow" : ["Git", "Gulp", "Bower"]
+    }
+  ],
+  "contacts" : [ "skype_kdn", "astahov@gmail.com", "+7 931 200 93 24", "г.Новосибирск, ул. Инская, д. 5" ]
+
+}
