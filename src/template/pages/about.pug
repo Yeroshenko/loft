@@ -1,7 +1,7 @@
 extends ../main-layout.pug
 
 block content
- 
+
       header.section.hero
         .hero__bg
           .hero__bg-img
@@ -18,13 +18,8 @@ block content
 
         .hero__title
           img(src="img/section-title.png", alt="").section-title
-          .user.hero__user-block
-            .user__photo
-              .user__photo-avatar
-                img(src="img/user-photo.jpg", alt="")
-            h1.user__name Валерий Ерошенко 
-            .user__descr Личный сайт веб разработчика
-
+          .hero__user-block
+            include ../sections/user
       section.section.about
         .about__left
           svg(
@@ -57,21 +52,7 @@ block content
                   .about-data__text
                     p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
                 .about-data__content
-                  ul.skills 
-                    each skill in skills
-                      each skillArray, skillName in skill
-                        li.skills__item
-                          .skill-section
-                            .skill-section__title= skillName
-                            ul.skill-section__list
-                              each skillTitle in skillArray
-                                li.skills-section__item
-                                  .skill
-                                    svg.skill__circle
-                                      circle( r="55" cx="75" cy="75" class="skill__ring")
-                                      circle( r="65" cx="75" cy="75" class="skill__level")
-                                    .skill__name= skillTitle
-
+                  include ../sections/skills
       section.section.map
         .main-maps
           .contacts.about__contacts
@@ -80,15 +61,4 @@ block content
             ul.contacts__data
               each contact in contacts
                 li.contacts__data-item= contact
-          .footer
-            ul.footer-menu.footer__menu
-              li.footer-menu__item
-                a(href="#" class="footer-menu__link") Мои работы
-              li.footer-menu__item
-                a(href="#" class="footer-menu__link") Обо мне
-              li.footer-menu__item
-                a(href="#" class="footer-menu__link") Блог
-              li.footer-menu__item
-                a(href="#" class="footer-menu__link") Авторизация  
-            .footer__socials
-              include ../sections/socials
+          include ../sections/footer

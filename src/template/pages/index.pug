@@ -1,0 +1,20 @@
+extends ../main-layout.pug
+
+block content
+      
+      section.section.welcome
+        button.welcome__button.button_transparent Авторизоваться
+        .card.welcome__card
+          .card__info.welcome__card-info
+            .card__info-user
+              include ../sections/user
+            .card__info-socials
+              include ../sections/socials
+          .welcome__card-nav
+            ul.card__nav
+              li.card__nav-item 
+                a(href="") Мои работы
+              li.card__nav-item 
+                a(href="") Обо мне
+              li.card__nav-item 
+                a(href="") Блог

@@ -1,10 +1,10 @@
 'use strict';
 
 let gulp = require('gulp'),
-gp = require('gulp-load-plugins')(),
-fs = require('fs'),
-del = require('del'),
-browserSync = require('browser-sync').create();
+  gp = require('gulp-load-plugins')(),
+  fs = require('fs'),
+  del = require('del'),
+  browserSync = require('browser-sync').create();
 
 
 // clean
@@ -14,7 +14,6 @@ gulp.task('clean', function() {
 
 // pug
 gulp.task('pug', () => {
-  // let locals = require('./content.json');
 
   return gulp.src('src/template/pages/*.pug')
     .pipe(gp.pug({
@@ -104,35 +103,6 @@ gulp.task('server', function() {
   });
 });
 
-// sprite:svg 
-gulp.task('sprite:svg', () => {
-  return gulp.src('src/sprite/*.svg')
-    .pipe(gp.svgmin({
-      js2svg: {
-        pretty: true
-      }
-    }))
-    .pipe(gp.cheerio({
-      run: function ($) {
-        $('[fill]').removeAttr('fill');
-        $('[stroke]').removeAttr('stroke');
-        $('[style]').removeAttr('style');
-      },
-      parserOptions: { xmlMode: true }
-    }))
-    .pipe(gp.replace  ('&gt;', '>'))
-    .pipe(gp.svgSprite  ({
-      mode: {
-        symbol: {
-          sprite: 'sprite.svg'
-        }
-      }
-    }))
-    .pipe(gulp.dest('build/img'));
-});
-
-
-
 // default
 gulp.task('default', gulp.series(
   'clean',
@@ -142,7 +112,6 @@ gulp.task('default', gulp.series(
     'js',
     'css:foundation',
     'js:foundation',
-    'sprite:svg',
     'copy:image',
     'copy:fonts'
   ),

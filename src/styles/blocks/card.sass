@@ -1,0 +1,39 @@
+.card
+  max-width: 380px
+  display: block
+  max-height: 395px
+  border-radius: 20px
+
+.card__info
+  padding: 40px 0
+  background-color: rgba(#fcfcfc, .85)
+  border-top-left-radius: 10px
+  border-top-right-radius: 10px
+
+.card__info-user
+  color: $subtitle-font-color
+
+.card__info-socials
+  display: flex
+  justify-content: center
+  margin-top: 35px
+  svg
+    fill: $green-color
+
+.card__nav
+  display: flex
+  font-display: row
+  justify-content: space-between
+  background-color: rgba($green-color, .85)
+  border-bottom-left-radius: 10px
+  border-bottom-right-radius: 10px
+  
+
+.card__nav-item
+  padding: 14px 30.9px
+  font-weight: 500
+  color: #fff
+  cursor: pointer
+  &:nth-child(2n)
+    border-left: 2px solid rgba(#dee3e7, .5)
+    border-right: 2px solid rgba(#dee3e7, .5)
