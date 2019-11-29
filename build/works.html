@@ -50,162 +50,57 @@
           </div>
         </div>
       </header>
-      <section class="section about">
-        <div class="about__left">
-          <svg class="triangle triangle_fil_white about__triangles" viewbox="0 0 1000 100" preserveAspectRatio="none">
-            <polygon points="0,0 0,100 1000,100"></polygon>
-          </svg>
-          <div class="about__left-inner">
-            <h2 class="title" style="background-image: url('img/about.svg')">обо мне</h2>
-            <div class="user-about">
-              <div class="user-about__picture"><img src="img/user-photo.jpg" alt=""/>
-                <div class="user-about__title">
-                  <div class="subtitle">Кто я</div>
+      <section class="section works">
+        <div class="works__top">
+          <div class="works__top-triangles">
+            <svg class="triangle triangle_fil_white works__triangles" viewbox="0 0 1000 100" preserveAspectRatio="none">
+              <polygon points="0,0 0,100 1000,100 1000,0 500,100"></polygon>
+            </svg>
+          </div>
+          <div class="works__top-title">
+            <h2 class="title" style="background-image: url('img/works.svg')">Мои работы</h2>
+          </div>
+        </div>
+        <div class="works__bottom">
+          <div class="works-slider">
+            <div class="works-slider__description">
+              <div class="works-slider__description-inner">
+                <div class="works-slider__title">
+                  <div class="subtitle">Сайт школы онлайн образования</div>
                 </div>
+                <div class="works-slider__technologies">html , css, javascript</div>
+                <div class="works-slider__link button_green"><a href="#">Посмотреть сайт </a></div>
               </div>
-              <div class="user-about__text">
-                <p>Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.</p>
-                <p>Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!    </p>
+            </div>
+            <div class="works-slider__preview">
+              <div class="works-slider__img"></div>
+              <div class="works-slider__nav">
+                <div class="works-slider__nav_left"></div>
+                <div class="works-slider__nav_right"></div>
               </div>
             </div>
           </div>
         </div>
-        <div class="about__right">
-          <svg class="triangle triangle_fil_beige about__triangles" viewbox="0 0 1000 100" preserveAspectRatio="none">
-            <polygon points="0,100 1000,100 1000,0"></polygon>
-            <div class="about__right-inner">
-              <div class="about-data">
-                <div class="about-data__description">
-                  <div class="about-data__title">
-                    <div class="subtitle">Чем я могу быть вам полезен</div>
+        <div class="works__feedback">
+          <div class="works__feedback-inner">
+            <div class="feedback">
+              <div class="feedback__title"> 
+                <div class="subtitle">Связаться со мной</div>
+              </div>
+              <div class="feedback__form">
+                <form action="">
+                  <div class="feedback__form-inputs">
+                    <input type="text" name="" id="name" placeholder="Имя"/>
+                    <input type="email" name="" id="email" placeholder="Email"/>
+                    <textarea type="textarea" name="" id="massage" placeholder="Ваше сообщение"></textarea>
                   </div>
-                  <div class="about-data__text">
-                    <p>Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.</p>
+                  <div class="feedback__form-buttons">
+                    <button type="submit" id="submit">Отправить</button>
+                    <button type="reset" id="reset">Очистить</button>
                   </div>
-                </div>
-                <div class="about-data__content">
-                  <ul class="skills"> 
-                    <li class="skills__item">
-                      <div class="skill-section">
-                        <div class="skill-section__title">Frontend</div>
-                        <ul class="skill-section__list">
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">HTML5</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">CSS3</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">JavaScript &amp; jQuery</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="skills__item">
-                      <div class="skill-section">
-                        <div class="skill-section__title">Backend</div>
-                        <ul class="skill-section__list">
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">PHP</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">mySQL</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">Node.js &amp; npm</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                    <li class="skills__item">
-                      <div class="skill-section">
-                        <div class="skill-section__title">WorkFlow</div>
-                        <ul class="skill-section__list">
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">Git</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">Gulp</div>
-                            </div>
-                          </li>
-                          <li class="skills-section__item">
-                            <div class="skill">
-                              <svg class="skill__circle">
-                                <circle class="skill__ring" r="55" cx="75" cy="75"></circle>
-                                <circle class="skill__level" r="65" cx="75" cy="75"></circle>
-                              </svg>
-                              <div class="skill__name">Bower</div>
-                            </div>
-                          </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                </form>
               </div>
             </div>
-          </svg>
-        </div>
-      </section>
-      <section class="section map">
-        <div class="main-maps">
-          <div class="contacts about__contacts">
-            <div class="contacts__title">
-              <div class="subtitle">Контакты</div>
-            </div>
-            <ul class="contacts__data">
-              <li class="contacts__data-item">skype_kdn</li>
-              <li class="contacts__data-item">astahov@gmail.com</li>
-              <li class="contacts__data-item">+7 931 200 93 24</li>
-              <li class="contacts__data-item">г.Новосибирск, ул. Инская, д. 5</li>
-            </ul>
           </div>
           <div class="footer">
             <ul class="footer-menu footer__menu">

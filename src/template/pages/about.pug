@@ -2,24 +2,7 @@ extends ../main-layout.pug
 
 block content
 
-      header.section.hero
-        .hero__bg
-          .hero__bg-img
-            img(src="img/hero-bg.jpg", alt="")
-        .hero__socials
-          include ../sections/socials
-        a(href="").hamburger
-          span
-          span
-          span
-        a(href="").down-arrow
-          .down-arrow__icon
-            img(src="img/arrow-down.svg", alt="")
-
-        .hero__title
-          img(src="img/section-title.png", alt="").section-title
-          .hero__user-block
-            include ../sections/user
+      include ../sections/header
       section.section.about
         .about__left
           svg(
@@ -28,7 +11,7 @@ block content
             class="triangle triangle_fil_white about__triangles")
             polygon(points="0,0 0,100 1000,100")
           .about__left-inner
-            +title('обо мне', 'about.svg', 'about__section-title')
+            +title('обо мне', 'about.svg', '')
             .user-about
               .user-about__picture
                 img(src="img/user-photo.jpg", alt="")

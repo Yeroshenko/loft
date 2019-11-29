@@ -1,0 +1,58 @@
+.feedback
+  display: flex
+  align-items: center
+  flex-direction: column
+  min-width: 380px
+  background-color: #aeae
+  border-radius: 10px
+  // background-image: url('../img/feedback-bg.jpg')
+
+.feedback__form
+  width: 100%
+
+.feedback__form-inputs
+  display: flex
+  flex-direction: column
+  width: 100%
+  padding: 0 20px
+  input, textarea
+    margin-bottom: 20px
+    border-radius: 10px
+    border: none
+    background-color: #fff
+    color: $main-font-color
+    &::placeholder
+      opacity: 0.5
+      color: #373e42
+  input
+    line-height: 45px
+    padding: 0 20px
+  textarea
+    padding: 15px 20px
+    resize: none
+    min-height: 140px
+
+
+
+.feedback__form-buttons
+  display: flex
+  flex-direction: row
+  
+  button
+    width: 50%
+    line-height: 45px 
+    font-weight: 500
+    color: #fff
+    background-color: rgba($green-color, .85)
+    border: none
+    cursor: pointer
+    &:first-child
+      border-bottom-left-radius: 10px
+      border-right: 1px solid rgba(#dee3e7, .5)
+    &:last-child
+      border-bottom-right-radius: 10px
+      border-left: 1px solid rgba(#dee3e7, .5)
+
+    &:active
+      background-color: rgba($green-color, .3)
+      border-color: rgba(#dee3e7, .3)

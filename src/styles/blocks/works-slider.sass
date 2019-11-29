@@ -1,0 +1,70 @@
+.works-slider
+  display: flex
+  flex-direction: row
+
+.works-slider__description,
+.works-slider__preview
+  width: 50%
+  min-height: 750px
+  background-color: $white
+
+.works-slider__description-inner
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  height: 100%
+  max-width: 420px
+  margin: 0 auto
+
+.works-slider__title
+  padding: 0 35px
+
+.works-slider__technologies
+  display: block
+  width: 100%
+  margin-bottom: 40px
+  text-align: center
+  font-weight: 500
+  line-height: 50px
+  text-transform: uppercase
+  color: $green-color
+  border-top: 2px solid rgba($green-color, .3)
+  border-bottom: 2px solid rgba($green-color, .3)
+
+.works-slider__link
+  a
+    position: relative
+    padding-left: 30px
+    &::before
+      content: ''
+      @include centered(y)
+      left: 0
+      background: url('../img/link.svg')
+      background-repeat: no-repeat
+      background-position: center
+      background-size: contain
+      width: 20px
+      height: 20px
+
+.works-slider__preview
+  display: flex
+  flex-direction: column
+
+.works-slider__img
+  height: 70%
+  width: 100%
+  background-color: #aeae
+
+.works-slider__nav
+  display: flex
+  flex-direction: row
+  height: 30%
+  width: 100%
+
+.works-slider__nav_left,
+.works-slider__nav_right
+  width: 100%
+  height: 100%
+  background-color: #aeaeae
+  border: 1px solid white
