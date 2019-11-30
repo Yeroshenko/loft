@@ -1,47 +1,46 @@
 extends ../main-layout.pug
 
 block content
-
-      include ../sections/header
-      section.section.about
-        .about__left
-          svg(
-            viewbox="0 0 1000 100" 
-            preserveAspectRatio="none"
-            class="triangle triangle_fil_white about__triangles")
-            polygon(points="0,0 0,100 1000,100")
-          .about__left-inner
-            +title('обо мне', 'about.svg', '')
-            .user-about
-              .user-about__picture
-                img(src="img/user-photo.jpg", alt="")
-                .user-about__title
-                  .subtitle
-                    | Кто я
-              .user-about__text
-                p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
-                p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!    
-        .about__right
-          svg(
-            viewbox="0 0 1000 100" 
-            preserveAspectRatio="none"
-            class="triangle triangle_fil_beige about__triangles")
-            polygon(points="0,100 1000,100 1000,0")
-            .about__right-inner
-              .about-data
-                .about-data__description
-                  .about-data__title
-                    .subtitle Чем я могу быть вам полезен
-                  .about-data__text
-                    p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
-                .about-data__content
-                  include ../sections/skills
-      section.section.map
-        .main-maps
-          .contacts.about__contacts
-            .contacts__title
-              .subtitle Контакты
-            ul.contacts__data
-              each contact in contacts
-                li.contacts__data-item= contact
-          include ../sections/footer
+  include ../sections/header
+  section.section.about
+    .about__left
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fil_white about__triangles")
+        polygon(points="0,0 0,100 1000,100")
+      .about__left-inner
+        +title('обо мне', 'about.svg', '')
+        .user-about
+          .user-about__picture
+            img(src="img/user-photo.jpg", alt="")
+            .user-about__title
+              .subtitle
+                | Кто я
+          .user-about__text
+            p Я веб разработчик из Новосибирска. Мне 27 лет. Я занимаюсь разработкой современных сайтов и приложений. Мне нравится делать интересные и современные проекты.
+            p Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool. Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!    
+    .about__right
+      svg(
+        viewbox="0 0 1000 100" 
+        preserveAspectRatio="none"
+        class="triangle triangle_fil_beige about__triangles")
+        polygon(points="0,100 1000,100 1000,0")
+        .about__right-inner
+          .about-data
+            .about-data__description
+              .about-data__title
+                .subtitle Чем я могу быть вам полезен
+              .about-data__text
+                p Больше всего меня привлекет Frontend разработка, но я также знаком и могу решать не сложные задачи на Backend. Но давайте по порядку.
+            .about-data__content
+              include ../sections/skills
+  section.section.map
+    .main-maps
+      .contacts.about__contacts
+        .contacts__title
+          .subtitle Контакты
+        ul.contacts__data
+          each contact in contacts
+            li.contacts__data-item= contact
+      include ../sections/footer

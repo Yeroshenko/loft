@@ -1,0 +1,54 @@
+.hero-blog
+  position: relative
+  height: 400px
+  overflow: hidden
+
+.hero-blog__bg
+  height: 100%
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.hero-blog__bg-img
+  width: 100%
+  height: 100%
+  img
+    width: 100%
+    height: 100%
+
+.hero-blog__socials
+  position: absolute
+  top: 30px
+  left: 30px
+  display: block
+  z-index: 2
+
+.hero-blog__bg-title
+  @include centered(x)
+  bottom: 0
+  text-align: center
+  width: 100%
+
+.hero-blog__user
+  @include centered(x)
+  top: 90px
+
+.hero-blog__title
+  @include centered(x)
+  top: 240px
+  .title
+    padding-top: 0
+    padding-bottom: 0
+    color: #fff
+    &::after, &::before
+      content: ''
+      display: block
+      @include centered(y)
+      background: rgba(#fff, .2)
+
+.hero-blog__descr
+  @include centered(x)
+  top: 310px
+  color: #fff

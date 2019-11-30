@@ -1,0 +1,67 @@
+.blog
+  position: relative
+
+.blog__top
+  position: relative
+
+.blog__triangles
+  position: absolute
+  bottom: 100%
+
+.blog__content
+  display: flex
+  flex-display: row
+  padding-top: 70px
+
+.sidebar
+  width: 25%
+
+.sidebar__list
+  display: flex
+  align-items: flex-end
+  flex-direction: column
+
+.sidebar__item
+  padding-right: 17px
+  text-align: right
+  line-height: 26px
+  height: 50px
+  display: flex
+  align-items: center
+  margin-bottom: 20px
+  color: $main-font-color
+  max-width: 260px
+  a
+    width: 100%
+  &.active
+    font-weight: 600
+    color: $green-color
+    border-right: 3px solid $green-color
+
+.articles
+  width: 75%
+  padding-left: 100px
+  max-width: 880px
+
+.article
+  padding-bottom: 70px
+  &:not(:first-child)
+    margin-top: 60px
+  &:not(:last-child)
+    border-bottom: 5px solid rgba(#373e42, .07)
+
+.article__title
+  font-family: "Bernier"
+  font-size: 35px
+  color: $main-font-color
+  margin-bottom: 25px
+
+.article__date
+  color: $green-color
+  margin-bottom: 25px
+
+.article__text
+  line-height: 26px
+  color: $main-font-color
+  p
+    margin-bottom: 16px

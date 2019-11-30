@@ -2,35 +2,35 @@ extends ../main-layout.pug
 
 block content
 
-      include ../sections/header
-      section.section.works
-        .works__top
-          .works__top-triangles
-            svg(
-              viewbox="0 0 1000 100" 
-              preserveAspectRatio="none"
-              class="triangle triangle_fil_white works__triangles")
-              polygon(points="0,0 0,100 1000,100 1000,0 500,100")
-          .works__top-title
-            +title('Мои работы', 'works.svg', '')
-        .works__bottom
-          .works-slider
-            .works-slider__description
-              .works-slider__description-inner
-                .works-slider__title
-                  .subtitle Сайт школы онлайн образования
-                .works-slider__technologies html , css, javascript
-                .works-slider__link.button_green
-                  a(href="#") Посмотреть сайт 
-            .works-slider__preview
-              .works-slider__img
+  include ../sections/header
+  section.section.works
+    .works__top
+      .works__top-triangles
+        svg(
+          viewbox="0 0 1000 100" 
+          preserveAspectRatio="none"
+          class="triangle triangle_fil_white works__triangles")
+          polygon(points="0,0 0,100 1000,100 1000,0 500,100")
+      .works__top-title
+        +title('Мои работы', 'works.svg', '')
+    .works__bottom
+      .works-slider
+        .works-slider__description
+          .works-slider__description-inner
+            .works-slider__title
+              .subtitle Сайт школы онлайн образования
+            .works-slider__technologies html , css, javascript
+            .works-slider__link.button_green
+              a(href="#") Посмотреть сайт 
+        .works-slider__preview
+          .works-slider__img
 
-              .works-slider__nav
-                .works-slider__nav_left
+          .works-slider__nav
+            .works-slider__nav_left
 
-                .works-slider__nav_right
-        .works__feedback
-          .works__feedback-inner
-            include ../sections/feedback
+            .works-slider__nav_right
+    .works__feedback
+      .works__feedback-inner
+        include ../sections/feedback
 
-          include ../sections/footer
+      include ../sections/footer

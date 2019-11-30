@@ -22,18 +22,29 @@
 
 .card__nav
   display: flex
-  font-display: row
-  justify-content: space-between
-  background-color: rgba($green-color, .85)
+  flex-direction: row
   border-bottom-left-radius: 10px
   border-bottom-right-radius: 10px
   
 
 .card__nav-item
-  padding: 14px 30.9px
+  width: 100% 
+  text-align: center
+  line-height: 45px
   font-weight: 500
   color: #fff
+  background-color: rgba($green-color, .85)
   cursor: pointer
   &:nth-child(2n)
-    border-left: 2px solid rgba(#dee3e7, .5)
-    border-right: 2px solid rgba(#dee3e7, .5)
+    border-left: 1px solid rgba(#dee3e7, .5)
+    border-right: 1px solid rgba(#dee3e7, .5)
+  &:first-child
+      border-bottom-left-radius: 10px
+      border-right: 1px solid rgba(#dee3e7, .5)
+  &:last-child
+    border-bottom-right-radius: 10px
+    border-left: 1px solid rgba(#dee3e7, .5)
+
+  &:hover
+    background-color: rgba($green-color, .4)
+    border-color: rgba(#dee3e7, .4)
